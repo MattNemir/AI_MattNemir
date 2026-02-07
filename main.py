@@ -127,7 +127,7 @@ def chat(user_id, text):
             logging.error(f"Ошибка API: {json.dumps(data, ensure_ascii=False)}")
     except Exception as e:
         logging.error(f"Ошибка при запросе: {e}")
-        bot.send_long_message(f"Ошибка при запросе: {e}, повторите попытку позже")
+        send_long_message(f"Ошибка при запросе: {e}, повторите попытку позже")
 
 TFLITE_PATH = "cat_dog_model.tflite"
 TFLITE_URL = os.getenv("CAT_DOGS_TFLITE_URL")
@@ -259,7 +259,7 @@ def handle_text(message):
     except Exception as e:
         bot.send_message(message.chat.id, f"Ошибка: {e}")
 
-if __name__ == "main":
+if __name__ == "__main__":
     print("main")
     server_url = os.getenv("RENDER_EXTERNAL_URL")
     if server_url and TOKEN:
