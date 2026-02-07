@@ -260,6 +260,7 @@ def handle_text(message):
         bot.send_message(message.chat.id, f"Ошибка: {e}")
 
 if __name__ == "main":
+    print("main")
     server_url = os.getenv("RENDER_EXTERNAL_URL")
     if server_url and TOKEN:
         webhook_url = f"{server_url.rstrip('/')}/{TOKEN}"
