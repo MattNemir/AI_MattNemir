@@ -12,7 +12,7 @@ import telebot
 from tensorflow.keras.models import load_model
 import tensorflow as tf
 from telebot import util
-
+print("test")
 logging.basicConfig(level=logging.INFO)
 
 TOKEN = os.getenv("BOT_TOKEN")
